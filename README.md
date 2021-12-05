@@ -14,3 +14,6 @@ Execute este script no shell para instalar o nó (você pode escolher a versão 
  ```"scripts": {
     "start": "node <main file>.js"
   }
+
+
+# Como usar v13 na replit!
