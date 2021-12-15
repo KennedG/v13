@@ -1,19 +1,24 @@
 # v13
-Colocar v13 na replit
+//1. Cole este código no Shell da Replit e aguarde terminar:
 
-Execute este script no shell para instalar o nó (você pode escolher a versão editando o número 16) e configurar npm.
+npm i --save-dev node@16 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH
 
+//Execute isto para limpar a npm e reinstalar o pacote:
 
-``` npm init -y && npm i --save-dev node@16 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd )/node_modules/nó/bin:$PATH ```
+rm -rf node_modules && rm package-lock.json && npm cache clear --force && npm cache clean --force && npm i
 
-2. Crie o .replit para executar o nó da concha em vez do console.
-
-```run = "npm start"```
-
-3. Certifique-se de adicionar o script inicial no seu arquivo package.json
- ```"scripts": {
-    "start": "node <main file>.js"
-  }
+//2. Crie um arquivo chamado .replit para que ele execute pelo Shell ao invés do console:
 
 
-# Como usar v13 na replit!
+run= "npm start"
+
+//3. Vá no package.json e SUBSTITUA o scripts atual por esse:
+
+"scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+},
+
+//OBS: Caso tenha pacotes como canvas, ou qualquer outro que cause problema, reinstale ele:
+
+npm uninstall canvas && npm i canvaso
